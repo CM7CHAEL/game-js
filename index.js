@@ -117,6 +117,7 @@ function draw () {
     if (opcion) {
       document.location.reload();
     } else {
+      document.location.reload();
     }
   }
   snake.unshift(newHead);
