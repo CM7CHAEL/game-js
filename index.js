@@ -46,10 +46,6 @@ let score = 0;
 let d;
 document.addEventListener('keydown', moveDirection);
 
-function activar(){
-  document.body.innerHTML += "<div><button id='b1'>Nuevo Botón</button></div>";
-}
-
 function moveDirection (event) {
   let key = event.keyCode;
   if (key == 37 && d != 'RIGHT') {
@@ -117,6 +113,11 @@ function draw () {
   if (snakeX < box || snakeX > 17 * box || snakeY < 3*box || snakeY > 17*box || collision(newHead,snake)) {
     clearInterval(game);
     dead.play();
+    let opcion = confirm('Continuar...?');
+    if (opcion) {
+      document.location.reload();
+    } else {
+    }
   }
   snake.unshift(newHead);
   ctx.fillStyle = 'white';
