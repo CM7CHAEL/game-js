@@ -1,0 +1,19 @@
+body {
+  background-color: #eee;
+}
+
+.container {
+  margin: 0 !important;
+}
+
+canvas {
+  display: block;
+  margin: 0 auto;
+  margin-top:5px;
+}
+
+span {
+  color: green;
+  font-size: 20px;
+  font-weight: 900;
+}
