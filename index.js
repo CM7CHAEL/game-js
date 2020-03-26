@@ -113,12 +113,9 @@ function draw () {
   if (snakeX < box || snakeX > 17 * box || snakeY < 3*box || snakeY > 17*box || collision(newHead,snake)) {
     clearInterval(game);
     dead.play();
-    let opcion = confirm('Continuar...?');
-    if (opcion) {
+    setTimeout(() => {
       document.location.reload();
-    } else {
-      document.location.reload();
-    }
+    }, 2000);
   }
   snake.unshift(newHead);
   ctx.fillStyle = 'white';
