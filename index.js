@@ -49,9 +49,13 @@ let d;
 document.addEventListener('keydown', moveDirection);
 
 function startGame () {
-  view = 'init'
-  startMusic.play();
-  d = 'RIGHT';
+  if (view === 'reset') {
+    document.location.reload();
+  } else {
+    view = 'init'
+    startMusic.play();
+    d = 'RIGHT';
+  }
 }
 
 function moveDirection (event, move) {
@@ -70,10 +74,8 @@ function moveDirection (event, move) {
       d = 'DOWN';
       down.play();
     }
-  } else if (view === 'reset') {
-    alert('Click en reset')
   } else {
-    alert('No seas vivo dale PLAY :v')
+    alert('No seas vivo dale PLAY')
   }
 }
 
@@ -131,7 +133,7 @@ function draw () {
     startMusic.pause();
     setTimeout(() => {
       view = 'reset'
-      alert('Game Over :v ')
+      alert('Game Over')
     }, 1000);
   }
   snake.unshift(newHead);
