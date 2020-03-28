@@ -30,9 +30,6 @@ span {
     height: 300px;
     width: 300px;
   }
-  .content {
-    display:none;
-  }
 }
 @media (min-width: 768px) {
   .btns {

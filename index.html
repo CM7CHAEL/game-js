@@ -9,19 +9,22 @@
   <title>Snake</title>
 </head>
 <body>
-  <nav class="navbar navbar-expand-lg navbar-dark bg-success" style="height:40px">
-    <a class="navbar-brand" href="#">Snake</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav mr-auto">
-        <li class="nav-item active">
-          <a class="nav-link" href="#">javascript <span class="sr-only">(current)</span></a>
-        </li>
-      </ul>
+  <div class="pos-f-t">
+    <div class="collapse" id="navbarToggleExternalContent">
+      <div class="bg-dark p-4">
+        <h5 class="text-white h4">CM7CHAEL</h5>
+        <span class="text-muted">
+          <span>source code:<br><a href="https://github.com/CodeExplainedRepo/Snake-JavaScript">https://github.com/CodeExplainedRepo/Snake-JavaScript</a></span><br>
+          <span>tutorial: <a href="https://www.youtube.com/watch?v=9TcU2C1AACw&t=148s">https://www.youtube.com/watch?v=9TcU2C1AACw&t=148s</a></span>
+        </span>
+      </div>
     </div>
-  </nav>
+    <nav class="navbar navbar-dark bg-dark">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    </nav>
+  </div>
   <div class="container">
     <div class="row">
       <div class="col-sm">
@@ -30,17 +33,12 @@
       <div class="col-sm">
         <canvas id="snake" width="608" height="600"></canvas>
       </div>
-      <div class="col-sm">
-        <p class="content">CM7CHAEL</p>
-        <span class="content">source code:<a href="https://github.com/CodeExplainedRepo/Snake-JavaScript">https://github.com/CodeExplainedRepo/Snake-JavaScript</a></span><br>
-        <span class="content">tutorial: <a href="https://www.youtube.com/watch?v=9TcU2C1AACw&t=148s">https://www.youtube.com/watch?v=9TcU2C1AACw&t=148s</a></span> 
-          <div class="btns" style="text-align:center">
-            <br><br>
-            <button onclick="moveDirection(event, 'up')" type="button" class="btn btn-success">▲</button><br><br>
-            <button onclick="moveDirection(event,'left')" type="button" class="btn btn-success izq">◄</button>
-            <button onclick="moveDirection(event, 'right')" type="button" class="btn btn-success  ">►</button><br><br>
-            <button onclick="moveDirection(event, 'down')" type="button" class="btn btn-success">▼</button>
-          </div>
+      <div class="btns" style="text-align:center; margin-left: 120px;">
+        <br><br>
+        <button onclick="moveDirection(event, 'up')" type="button" class="btn btn-success">▲</button><br><br>
+        <button onclick="moveDirection(event,'left')" type="button" class="btn btn-success izq">◄</button>
+        <button onclick="moveDirection(event, 'right')" type="button" class="btn btn-success  ">►</button><br><br>
+        <button onclick="moveDirection(event, 'down')" type="button" class="btn btn-success">▼</button>
       </div>
     </div>
   </div>
