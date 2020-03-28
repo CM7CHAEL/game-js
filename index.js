@@ -30,7 +30,7 @@ down.src = 'audio/down.mp3';
 
 // create the snake
 let snake = [];
-
+let view = 'init'
 snake[0] = {
   x : 9 * box,
   y : 10 * box
