@@ -24,17 +24,17 @@
   </nav>
   <div class="container">
     <div class="row">
-      <div class="col-sm content">
-        <span>source code:</span> <a href="https://github.com/CodeExplainedRepo/Snake-JavaScript">https://github.com/CodeExplainedRepo/Snake-JavaScript</a> <br>
-        <span>tutorial:</span> <a href="https://www.youtube.com/watch?v=9TcU2C1AACw&t=148s">https://www.youtube.com/watch?v=9TcU2C1AACw&t=148s</a>
+      <div class="col-sm">
+        <span class='start-btn' onclick="startGame()">PLAY&nbsp; &nbsp; </span>
+        <span class='start-btn' onclick="document.location.reload();">RESET &nbsp; </span>
       </div>
       <div class="col-sm">
         <canvas id="snake" width="608" height="600"></canvas>
       </div>
       <div class="col-sm">
         <p class="content">CM7CHAEL</p>
-          <span class='start-btn' onclick="startGame()">PLAY&nbsp; &nbsp; </span>
-          <span class='start-btn' onclick="document.location.reload();">RESET &nbsp; </span>
+        <span class="content">source code:<a href="https://github.com/CodeExplainedRepo/Snake-JavaScript">https://github.com/CodeExplainedRepo/Snake-JavaScript</a></span><br>
+        <span class="content">tutorial: <a href="https://www.youtube.com/watch?v=9TcU2C1AACw&t=148s">https://www.youtube.com/watch?v=9TcU2C1AACw&t=148s</a></span> 
           <div class="btns" style="text-align:center">
             <br><br>
             <button onclick="moveDirection(event, 'up')" type="button" class="btn btn-success">▲</button><br><br>

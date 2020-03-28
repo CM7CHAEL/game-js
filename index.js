@@ -30,7 +30,7 @@ down.src = 'audio/down.mp3';
 
 // create the snake
 let snake = [];
-let view = 'init'
+let view = 'xd'
 snake[0] = {
   x : 9 * box,
   y : 10 * box
@@ -49,24 +49,31 @@ let d;
 document.addEventListener('keydown', moveDirection);
 
 function startGame () {
+  view = 'init'
   startMusic.play();
   d = 'RIGHT';
 }
 
 function moveDirection (event, move) {
-  let key = event.keyCode;
-  if (key == 37 && d != 'RIGHT' || move === 'left') {
-    left.play();
-    d = 'LEFT';
-  } else if (key == 38 && d != 'DOWN' || move === 'up' ) {
-    d = 'UP';
-    up.play();
-  } else if (key == 39 && d != 'LEFT' || move === 'right') {
-    d = 'RIGHT';
-    right.play();
-  } else if (key == 40 && d != 'UP' || move === 'down') {
-    d = 'DOWN';
-    down.play();
+  if (view === 'init') {
+    let key = event.keyCode;
+    if (key == 37 && d != 'RIGHT' || move === 'left') {
+      left.play();
+      d = 'LEFT';
+    } else if (key == 38 && d != 'DOWN' || move === 'up' ) {
+      d = 'UP';
+      up.play();
+    } else if (key == 39 && d != 'LEFT' || move === 'right') {
+      d = 'RIGHT';
+      right.play();
+    } else if (key == 40 && d != 'UP' || move === 'down') {
+      d = 'DOWN';
+      down.play();
+    }
+  } else if (view === 'reset') {
+    alert('Click en reset')
+  } else {
+    alert('No seas vivo dale PLAY :v')
   }
 }
 
@@ -122,8 +129,10 @@ function draw () {
     dead.play();
     startMusic.currentTime=0;
     startMusic.pause();
-    // alert('Game Over :v ')
-    // document.location.reload();
+    setTimeout(() => {
+      view = 'reset'
+      alert('Game Over :v ')
+    }, 1000);
   }
   snake.unshift(newHead);
   ctx.fillStyle = 'white';
