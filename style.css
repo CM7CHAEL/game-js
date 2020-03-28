@@ -2,6 +2,13 @@ body {
   background-color: #eee;
 }
 
+button {
+  margin-top:-20px !important;
+}
+.izq {
+  margin-right: 40px;
+}
+
 .container {
   margin: 0 !important;
 }
@@ -16,4 +23,39 @@ span {
   color: green;
   font-size: 20px;
   font-weight: 900;
+}
+
+@media (max-width: 768px) {
+  canvas {
+    height: 300px;
+    width: 300px;
+  }
+  .content {
+    display:none;
+  }
+}
+@media (min-width: 768px) {
+  .btns {
+    display:none;
+  }
+}
+
+.start-btn:active {
+	box-shadow: none;
+	position: relative;
+	top: .2em;
+}
+
+.start-btn{
+  text-align: center;
+  display: inline-block;
+  margin:5px;
+  font-weight: bold;
+  padding: 10px 0 10px 10px ;
+  background-color: lightgray;
+  text-shadow: -1px -1px black, 1px 1px white;
+  color: gray;
+  border-radius: 7px;
+  box-shadow: 0 .2em gray;
+  cursor: pointer;
 }

@@ -46,18 +46,18 @@ let score = 0;
 let d;
 document.addEventListener('keydown', moveDirection);
 
-function moveDirection (event) {
+function moveDirection (event, move) {
   let key = event.keyCode;
-  if (key == 37 && d != 'RIGHT') {
+  if (key == 37 && d != 'RIGHT' || move === 'left') {
     left.play();
     d = 'LEFT';
-  } else if (key == 38 && d != 'DOWN') {
+  } else if (key == 38 && d != 'DOWN' || move === 'up' ) {
     d = 'UP';
     up.play();
-  } else if (key == 39 && d != 'LEFT') {
+  } else if (key == 39 && d != 'LEFT' || move === 'right') {
     d = 'RIGHT';
     right.play();
-  } else if (key == 40 && d != 'UP') {
+  } else if (key == 40 && d != 'UP' || move === 'down') {
     d = 'DOWN';
     down.play();
   }
@@ -114,8 +114,8 @@ function draw () {
     clearInterval(game);
     dead.play();
     setTimeout(() => {
-      document.location.reload();
-    }, 2000);
+      alert('Game over papu :/')
+    }, 1000);
   }
   snake.unshift(newHead);
   ctx.fillStyle = 'white';

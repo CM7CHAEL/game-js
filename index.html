@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTr8U_slRRRrgpomuGcxpKujXh6cOe7Y7MaTq1Vjr8Y7QgkbGw6" />
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
   <title>Snake</title>
@@ -23,7 +24,7 @@
   </nav>
   <div class="container">
     <div class="row">
-      <div class="col-sm">
+      <div class="col-sm content">
         <span>source code:</span> <a href="https://github.com/CodeExplainedRepo/Snake-JavaScript">https://github.com/CodeExplainedRepo/Snake-JavaScript</a> <br>
         <span>tutorial:</span> <a href="https://www.youtube.com/watch?v=9TcU2C1AACw&t=148s">https://www.youtube.com/watch?v=9TcU2C1AACw&t=148s</a>
       </div>
@@ -31,7 +32,14 @@
         <canvas id="snake" width="608" height="600"></canvas>
       </div>
       <div class="col-sm">
-        <p>CM7CHAEL</p>
+        <p class="content">CM7CHAEL</p>
+          <span class='start-btn' onclick="document.location.reload();">START</span>
+          <div class="btns" style="text-align:center">
+            <button onclick="moveDirection(event, 'up')" type="button" class="btn btn-success">▲</button><br><br>
+            <button onclick="moveDirection(event,'left')" type="button" class="btn btn-success izq">◄</button>
+            <button onclick="moveDirection(event, 'right')" type="button" class="btn btn-success  ">►</button><br><br>
+            <button onclick="moveDirection(event, 'down')" type="button" class="btn btn-success">▼</button>
+          </div>
       </div>
     </div>
   </div>
