@@ -12,6 +12,7 @@ foodImg.src = 'img/food.png';
 
 // load audio files
 
+let startMusic = new Audio();
 let dead = new Audio();
 let eat = new Audio();
 let up = new Audio();
@@ -19,6 +20,7 @@ let right = new Audio();
 let left = new Audio();
 let down = new Audio();
 
+startMusic.src = 'audio/snakeMusic.mp3';
 dead.src = 'audio/dead.mp3';
 eat.src = 'audio/eat.mp3';
 up.src = 'audio/up.mp3';
@@ -47,6 +49,7 @@ let d;
 document.addEventListener('keydown', moveDirection);
 
 function moveDirection (event, move) {
+  startMusic.play();
   let key = event.keyCode;
   if (key == 37 && d != 'RIGHT' || move === 'left') {
     left.play();
@@ -113,9 +116,10 @@ function draw () {
   if (snakeX < box || snakeX > 17 * box || snakeY < 3*box || snakeY > 17*box || collision(newHead,snake)) {
     clearInterval(game);
     dead.play();
-    setTimeout(() => {
-      alert('Game over papu :/')
-    }, 1000);
+    startMusic.currentTime=0;
+    startMusic.pause();
+    document.location.reload();
+    document.write('Game Over, dele F5 por mientras hahahaa :v ')
   }
   snake.unshift(newHead);
   ctx.fillStyle = 'white';
