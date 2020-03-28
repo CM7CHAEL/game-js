@@ -48,8 +48,12 @@ let score = 0;
 let d;
 document.addEventListener('keydown', moveDirection);
 
-function moveDirection (event, move) {
+function startGame () {
   startMusic.play();
+  d = 'RIGHT';
+}
+
+function moveDirection (event, move) {
   let key = event.keyCode;
   if (key == 37 && d != 'RIGHT' || move === 'left') {
     left.play();
@@ -103,7 +107,7 @@ function draw () {
       y : Math.floor(Math.random()*15+3) * box
   }
   // we don't remove the tail
-  } else{
+  } else {
     // remove the tail
     snake.pop();
   }
@@ -113,19 +117,19 @@ function draw () {
     y : snakeY
   }
   // game over :'(
-  if (snakeX < box || snakeX > 17 * box || snakeY < 3*box || snakeY > 17*box || collision(newHead,snake)) {
+  if (snakeX < box || snakeX > 17 * box || snakeY < 3 * box || snakeY > 17 * box || collision(newHead, snake)) {
     clearInterval(game);
     dead.play();
     startMusic.currentTime=0;
     startMusic.pause();
-    document.location.reload();
-    document.write('Game Over, dele F5 por mientras hahahaa :v ')
+    // alert('Game Over :v ')
+    // document.location.reload();
   }
   snake.unshift(newHead);
   ctx.fillStyle = 'white';
   ctx.font = '45px Changa one';
-  ctx.fillText(score,2*box,1.6*box);
+  ctx.fillText(score, 2 * box, 1.6 * box);
 }
 
 // call draw function every 100 ms
-let game = setInterval(draw, 100);
+let game = setInterval(draw, 170);
