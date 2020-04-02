@@ -3,50 +3,55 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" type="image/png" href="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTr8U_slRRRrgpomuGcxpKujXh6cOe7Y7MaTq1Vjr8Y7QgkbGw6" />
-  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" href="data:image/png;base64,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" />
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-  <title>Snake</title>
+  <title>games-js</title>
 </head>
 <body>
-  <div class="pos-f-t">
-    <div class="collapse" id="navbarToggleExternalContent">
-      <div class="bg-dark p-4">
-        <h5 class="text-white h4">CM7CHAEL</h5>
-        <span class="text-muted">
-          <span>source code:<br><a href="https://github.com/CodeExplainedRepo/Snake-JavaScript">https://github.com/CodeExplainedRepo/Snake-JavaScript</a></span><br>
-          <span>tutorial: <a href="https://www.youtube.com/watch?v=9TcU2C1AACw&t=148s">https://www.youtube.com/watch?v=9TcU2C1AACw&t=148s</a></span>
-        </span>
-      </div>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-info">
+    <a class="navbar-brand" href="#">GAMES</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">javascript <span class="sr-only">(html5)</span></a>
+        </li>
+      </ul>
     </div>
-    <nav class="navbar navbar-dark bg-dark">
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-    </nav>
-  </div>
-  <div class="container">
-    <div class="row">
-      <div class="col-sm">
-        <span class='start-btn' onclick="startGame()">PLAY&nbsp; &nbsp; </span>
-      </div>
-      <div class="col-sm">
-        <canvas id="snake" width="608" height="600"></canvas>
-      </div>
-      <div class="btns" style="text-align:center; margin-left: 120px;">
-        <br><br>
-        <button onclick="moveDirection(event, 'up')" type="button" class="btn btn-success">▲</button><br><br>
-        <button onclick="moveDirection(event,'left')" type="button" class="btn btn-success izq">◄</button>
-        <button onclick="moveDirection(event, 'right')" type="button" class="btn btn-success  ">►</button><br><br>
-        <button onclick="moveDirection(event, 'down')" type="button" class="btn btn-success">▼</button>
-      </div>
-    </div>
+  </nav>
+  <div id="app">
+    <section id="speakers" class="mt-4">
+      <div class="container">
+        <div class="row">
+          <div class="col text-center text-uppercase">
+            <small></small>
+            <h2>Go...!</h2>
+          </div>
+        </div>
+        <div class="row">
+          <div style="cursor: pointer" class="col-12 col-sm-6 col-md-3 mb-4" v-for="(item, index) in cards" :key="index"  data-placement="bottom" data-toggle="tooltip" :title="item.description">
+            <a :href="item.link">
+              <div class="card">
+                <img class="card-img-top" height="200px" :src="item.img">
+                <div class="card-body">
+                  <div class="badges mb-2">
+                    <span class="badge badge-info">{{item.title}}</span>
+                  </div>
+                  <p class="card-text">
+                  </p>
+                </div>
+              </div>
+            </a>
+          </div>
+    </section>
   </div>
 </body>
 </html>
 
+<script src="https://unpkg.com/vue/dist/vue.js"></script>
 <script src="index.js"></script>
- <!-- bootstrap -->
 <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
